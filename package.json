@@ -1,0 +1,16 @@
+{
+  "name": "achievements",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "node ./app.js"
+  },
+  "dependencies": {
+    "compression": "^1.6.1",
+    "ejs": "^2.4.1",
+    "express": "^4.13.4"
+  },
+  "devDependencies": {},
+  "author": "masterjfowler@gmail.com",
+  "license": "ISC"
+}
