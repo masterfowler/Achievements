@@ -7,10 +7,13 @@
     "dev": "webpack-dev-server --devtool eval --progress --colors --content-base build"
   },
   "dependencies": {
+    "bootstrap": "^3.3.6",
     "compression": "^1.6.1",
     "ejs": "^2.4.1",
     "express": "^4.13.4",
+    "jquery": "^2.2.1",
     "react": "^0.14.7",
+    "react-bootstrap": "^0.28.3",
     "react-dom": "^0.14.7"
   },
   "devDependencies": {
