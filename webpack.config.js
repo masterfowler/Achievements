@@ -1,3 +1,4 @@
+var webpack = require('webpack');
 var npm_dir = __dirname + '/node_modules';
 
 var config = {
@@ -14,11 +15,21 @@ var config = {
     path: './build',
     filename: 'bundle.js'
   },
+  eslint: {
+    configFile: __dirname + '/.eslintrc'
+  },
   module: {
     noParse: [
     ],
+    preLoaders: [
+        { test: /\.js$/, include: __dirname + './src/assets/scripts/', loader: 'eslint-loader' }
+    ],
     loaders: [
-      { test: /\.(js|jsx)$/, loader: 'babel-loader', query: {presets: ['react', 'es2015']}}
+      { test: /\.(js|jsx)$/, loader: 'babel-loader', query: {presets: ['react', 'es2015']}},
+      { test: /\.scss$/, loader: 'style!css!sass'},
+      { test: /\.css$/, loader: 'style!css' },
+      { test: /\.(png|jpg)$/, loader: 'url?limit=25000'},
+      { test: /\.(svg|woff|woff2|eot|ttf)$/, loader: 'file-loader' }
     ]
   }
 };
