@@ -1,4 +1,4 @@
-var webpack = require('webpack');
+var path = require('path');
 var npm_dir = __dirname + '/node_modules';
 
 var config = {
@@ -9,6 +9,7 @@ var config = {
   entry: ['./src/assets/scripts/main.jsx'],
   resolve: { 
     alias: {
+        style: path.join(__dirname, './src/assets/styles/')
     }
   },
   output: {
@@ -34,7 +35,7 @@ var config = {
   }
 };
 
-config.addVendor('react', npm_dir + '/react/dist/react.min.js');
+config.addVendor('react', npm_dir + '/react/dist/react.js');
 config.addVendor('react-dom', npm_dir + '/react-dom/dist/react-dom.min.js');
 config.addVendor('jquery', npm_dir + '/jquery/dist/jquery.min.js');
 config.addVendor('bootstrap', npm_dir + '/bootstrap/dist/js/bootstrap.min.js');

@@ -1,0 +1,23 @@
+@import 'achievements-constants';
+
+.achievements-menu {
+    background-color: $achievementsGreen;
+}
+
+.achievements-brand {
+    font-weight: bold;
+    font-size: 24px;
+    color: $achievementsHighlight !important;
+}
+
+.achievements-links {
+    > .active {
+        > a {
+            color: $achievementsHighlight !important;
+            background-color: $achievementsLightGreen !important;
+        }
+    }
+    > a {
+            color: $achievementsHighlight !important;
+        }
+}
