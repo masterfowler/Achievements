@@ -9,7 +9,8 @@ var config = {
   entry: ['./src/assets/scripts/main.jsx'],
   resolve: { 
     alias: {
-        style: path.join(__dirname, './src/assets/styles/')
+        style: path.join(__dirname, './src/assets/styles/'),
+        image: path.join(__dirname, './src/assets/images/')
     }
   },
   output: {

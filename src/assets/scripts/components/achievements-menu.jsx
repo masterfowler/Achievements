@@ -1,6 +1,7 @@
 import React from 'react';
 require('bootstrap');
 require('style/achievements-menu.scss');
+var medalImage = require('image/Medal2.png');
 
 var routes = [
     { name: 'Home', url: '#' },
@@ -109,7 +110,7 @@ class AchievementsMenu extends React.Component{
                             <span className="icon-bar"></span>
                             <span className="icon-bar"></span>
                         </button>
-                        <a className="navbar-brand achievements-brand" href="#">Achievements</a>
+                        <a className="navbar-brand achievements-brand" href="#"><img src={medalImage} /></a>
                     </div>
 
                     <div className="collapse navbar-collapse" id="navbar-collapse-1">
