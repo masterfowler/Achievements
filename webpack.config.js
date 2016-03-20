@@ -18,7 +18,8 @@ var config = {
     filename: 'bundle.js'
   },
   eslint: {
-    configFile: __dirname + '/.eslintrc'
+    configFile: __dirname + '/.eslintrc',
+    emitError: true
   },
   module: {
     noParse: [

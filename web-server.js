@@ -17,12 +17,12 @@ function pad(n) {
 }
 function printTimeNow() {
     var dt = new Date();
-    return '[' + pad(dt.getHours()) + ':' + pad(dt.getMinutes()) + ':' + pad(dt.getSeconds()) + '] '
+    return '[' + pad(dt.getHours()) + ':' + pad(dt.getMinutes()) + ':' + pad(dt.getSeconds()) + '] ';
 }
 
 // Create a logging callback, so we log every resource request.
 server.use(function (req, res, next) {
-    console.log(printTimeNow() + req.method + " --> " + req.url);
+    console.log(printTimeNow() + req.method + ' --> ' + req.url);
     next();
 });
 
@@ -34,7 +34,7 @@ server.use(compression());
 server.use(express.static(__dirname + '/' + RELEASE));
 
 // Handle 404 errors (page not found)
-server.use(function (req, res, next) {
+server.use(function (req, res) {
     console.log(printTimeNow() + 'ERROR: resource not found.');
     res.status(404);
     // Respond with HTML if possible

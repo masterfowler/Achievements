@@ -4,7 +4,8 @@
   "description": "",
   "scripts": {
     "start": "node ./web-server.js",
-    "dev": "webpack-dev-server --devtool eval --progress --colors --content-base build"
+    "dev": "webpack-dev-server --devtool eval --progress --colors --content-base build",
+    "lint": "eslint . --ext .js --ext .jsx"
   },
   "dependencies": {
     "bootstrap": "^3.3.6",
