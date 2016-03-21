@@ -1,89 +1,27 @@
 {
-    'plugins': [
-        'react'
-    ],
-    'env': {
-        'browser': true,
-        'jquery': true,
-        'node': true,
-        'es6': true
-    },
-    'ecmaFeatures': {
-        'arrowFunctions': true,
-        'blockBindings': true,
-        'classes': true,
-        'defaultParams': true,
-        'destructuring ': true,
-        'experimentalObjectRestSpread': true, 
-        'forOf': true,
-        'generators': true,
-        'jsx': true,
-        'modules': true,
-        'restParams': true,
-        'spread': true,
-        'superInFunctions': true,
-        'templateStrings': true,
-        'experimentalObjectRestSpread': true
-    },
-    'rules': {
-        'comma-dangle': [2, 'never'],
-        'no-cond-assign': [2, 'except-parens'],
-        'no-constant-condition': 2,
-        'no-dupe-args': 2,
-        'no-dupe-keys': 2,
-        'no-duplicate-case': 2,
-        'no-empty': 2,
-        'no-ex-assign': 2,
-        'no-extra-boolean-cast': 2,
-        'no-extra-parens': [2, 'functions'],
-        'no-extra-semi': 2,
-        'no-func-assign': 2,
-        'no-irregular-whitespace': 2,
-        'no-obj-calls': 2,
-        'no-negated-in-lhs': 2,
-        'no-sparse-arrays': 2,
-        'no-unexpected-multiline': 2,
-        'no-unreachable': 2,
-        'use-isnan': 2,
-        'valid-typeof': 2,
-        'strict': [2, 'global'],
-        'no-delete-var': 2,
-        'no-label-var': 2,
-        'no-shadow': [2, { 'builtinGlobals': true } ],
-        'no-undef-init': 2,
-        'no-undef': 2,
-        'no-use-before-define': 2,
-        'no-unused-vars': [2, { 'vars': 'all', 'args': 'after-used' }],
-        'no-underscore-dangle': 0,
-        'block-scoped-var': 2,
-        'curly': 2,
-        'default-case': 2,
-        'dot-location': [2, 'object'],
-        'eqeqeq': [2, 'smart'],
-        'guard-for-in': 2,
-        'no-eq-null': 2,
-        'no-eval': 2,
-        'no-fallthrough': 2,
-        'no-floating-decimal': 2,
-        'no-implicit-coercion': 2,
-        'no-multi-str': 2,
-        'no-native-reassign': 2,
-        'no-new-func': 2,
-        'no-octal': 2,
-        'no-redeclare': [2, { 'builtinGlobals': true }],
-        'no-script-url': 2,
-        'no-self-compare': 2,
-        'no-sequences': 2,
-        'no-unused-expressions': 2,
-        'wrap-iife': [2, 'outside'],
-        'semi': 2,
-        'quotes': [2, 'single', 'avoid-escape'],
-        'no-multi-spaces': 0,
-        'indent': [2, 4, { 'SwitchCase': 0, 'VariableDeclarator': 1 }],
-        'eol-last': 2,
-        'linebreak-style': 2,
-        'new-parens': 2,
-        'no-mixed-spaces-and-tabs': 2,
-        'no-trailing-spaces': 2
-    }
+  "ecmaFeatures": {
+    "jsx": true,
+    "modules": true  
+  },
+  // I want to use babel-eslint for parsing!
+  "parser": "babel-eslint",
+  "env": {
+    // I write for browser
+    "browser": true,
+    // in CommonJS
+    "node": true
+  },
+  // To give you an idea how to override rule options:
+  "rules": {
+    "quotes": [2, "single"],
+    "eol-last": [0],
+    "no-mixed-requires": [0],
+    "no-underscore-dangle": [0],
+    "react/jsx-uses-react": 2,
+    "react/jsx-uses-vars": 2,
+    "react/react-in-jsx-scope": 2
+  },
+  "plugins": [
+      "react"
+  ]
 }

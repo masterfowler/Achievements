@@ -9,8 +9,8 @@ var config = {
   entry: ['./src/assets/scripts/main.jsx'],
   resolve: { 
     alias: {
-        style: path.join(__dirname, './src/assets/styles/'),
-        image: path.join(__dirname, './src/assets/images/')
+        style: path.join(__dirname, 'src/assets/styles/'),
+        image: path.join(__dirname, 'src/assets/images/')
     }
   },
   output: {
@@ -25,10 +25,10 @@ var config = {
     noParse: [
     ],
     preLoaders: [
-        { test: /\.js$/, include: __dirname + './src/assets/scripts/', loader: 'eslint-loader' }
+        { test: /\.(js|jsx)$/,  loader: 'eslint-loader', include: path.join(__dirname, 'src/') }
     ],
     loaders: [
-      { test: /\.(js|jsx)$/, loader: 'babel-loader', query: {presets: ['react', 'es2015']}},
+      { test: /\.(js|jsx)?$/, loader: 'babel-loader', include: [ path.join(__dirname, 'src/') ], query: { presets: [ 'react', 'es2015' ]} },
       { test: /\.scss$/, loader: 'style!css!sass'},
       { test: /\.css$/, loader: 'style!css' },
       { test: /\.(png|jpg)$/, loader: 'url?limit=25000'},
