@@ -1,7 +1,7 @@
 @import 'achievements-constants';
 
 .achievements-menu {
-    background-color: $achievementsGreen;
+    background-color: $achievementsDark;
 }
 
 .achievements-brand {
@@ -18,7 +18,7 @@
     > .active {
         > a {
             color: $achievementsHighlight !important;
-            background-color: $achievementsLightGreen !important;
+            background-color: $achievementsLight !important;
         }
     }
 }
@@ -26,7 +26,7 @@
 .navbar-default .navbar-nav {
     > li {
         > a {
-            color: $achievementsLightGreen;
+            color: $achievementsLight;
         }
         > a:hover {
             color: #FFF;
