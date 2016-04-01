@@ -117,6 +117,7 @@ class AchievementsMenu extends React.Component{
                         <ul className="nav navbar-nav achievements-links">
                             {navItems}
                         </ul>
+                        <button type="button" className="btn btn-default navbar-btn navbar-right">Sign in</button>
                     </div>
                 </div>
             </nav>      
