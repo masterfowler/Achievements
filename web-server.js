@@ -3,6 +3,8 @@ var express = require('express');
 var ejs = require('ejs');
 var compression = require('compression');
 
+var wines = require('./routes/employee');
+
 // Release version
 var RELEASE = 'build';
 //var RELEASE = 'dist';
@@ -50,6 +52,8 @@ server.use(function (req, res) {
         res.type('txt').send('Not found');
     }
 });
+
+server.get('/employees', wines.findAll);
 
 // Define the port we will bind to
 var port = 8000;
